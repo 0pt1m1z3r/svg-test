@@ -86,7 +86,10 @@ function spriteFilenameGeneratorProd(svgPath) {
 }
 
 function normalizeSvgSpritePathKey(pathKey) {
-  return pathKey.toLowerCase().replace(/\//g, '-')
+  return pathKey
+    .toLowerCase()
+    .replace(/(^\/|\/$)/g, '')
+    .replace(/\//g, '-')
 }
 
 function getSvgSpritePathKey({ svgPath, options }) {
