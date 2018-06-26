@@ -1,0 +1,14 @@
+{
+  "name": "svg-test",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "nuxt": "^1.0.0",
+    "svg-sprite-loader": "github:kisenka/svg-sprite-loader"
+  },
+  "devDependencies": {}
+}
