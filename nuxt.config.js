@@ -43,15 +43,16 @@ module.exports = {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
         options: {
-          symbolId: this.options.dev
-            ? '[1].[ext]'
-            : (new IncrementalCache()).get,
+          // symbolId: this.options.dev
+          //   ? '[1].[ext]'
+          //   : (new IncrementalCache()).get,
           symbolRegExp: this.options.srcDir + '/(.*)\\.svg',
           esModule: false,
-          extract: true,
-          spriteFilename: this.options.dev
-            ? spriteFilenameGeneratorDev.bind(this)()
-            : spriteFilenameGeneratorProd.bind(this)()
+          runtimeCompat: true,
+          spriteModule: 'svg-sprite-loader/runtime/sprite.build'
+          // spriteFilename: this.options.dev
+          //   ? spriteFilenameGeneratorDev.bind(this)()
+          //   : spriteFilenameGeneratorProd.bind(this)()
         }
       })
     },

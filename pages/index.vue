@@ -1,29 +1,35 @@
 <template>
 <div>
+  <div v-html="sprite"></div>
+
   <div>
     <h3>&lt;svg&gt;&lt;use&gt;</h3>
     <svg style="width: 200px; height: 200px;">
-      <use xlink:href="./images/bestdeals.svg"></use>
+      <use xlink:href="#bestdeals"></use>
     </svg>
     <svg style="width: 200px; height: 200px;">
-      <use xlink:href="./images/profile.svg"></use>
+      <use xlink:href="#profile"></use>
     </svg>
     <svg style="width: 200px; height: 200px;">
-      <use xlink:href="./images/select.svg"></use>
+      <use xlink:href="#select"></use>
     </svg>
-  </div>
-  <div>
-    <h3>&lt;img&gt;</h3>
-    <img style="width: 200px; height: 200px;" src="./images/bestdeals.svg">
-    <img style="width: 200px; height: 200px;" src="./images/profile.svg">
-    <img style="width: 200px; height: 200px;" src="./images/select.svg">
   </div>
 </div>
 </template>
 
 <script>
-export default {
+import sprite from 'svg-sprite-loader/runtime/sprite.build';
 
+import './images/bestdeals.svg';
+import './images/profile.svg';
+import './images/select.svg';
+
+export default {
+    data() {
+      return {
+        sprite: sprite.toString()
+      }
+    }
 }
 </script>
 

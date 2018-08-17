@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "nuxt": "^1.0.0",
-    "svg-sprite-loader": "github:kisenka/svg-sprite-loader"
+    "svg-sprite-loader": "^3.9.2"
   },
   "devDependencies": {}
 }
